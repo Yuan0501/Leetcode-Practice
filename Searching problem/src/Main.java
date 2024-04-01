@@ -1,12 +1,7 @@
 
 public class Main {
     public static void main(String[] args) {
-        Problem350 slu = new Problem350();
-        int[] nums1 = {1, 2, 2, 1};
-        int[] nums2 = {2, 2};
-        int[] res = slu.intersect(nums1,nums2);
-        for(int i: res){
-            System.out.println(i);
-        }
+        Problem242 slu = new Problem242();
+        System.out.println(slu.isAnagram("rat", "car"));
     }
 }
