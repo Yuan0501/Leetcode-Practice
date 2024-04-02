@@ -1,7 +1,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        Problem242 slu = new Problem242();
-        System.out.println(slu.isAnagram("rat", "car"));
+        Problem290 slu = new Problem290();
+        System.out.println(slu.wordPattern("abba", "dog cat cat dog"));
+
     }
 }
