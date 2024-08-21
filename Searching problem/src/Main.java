@@ -5,9 +5,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Problem16 slu = new Problem16();
-        int[] nums = {-1,2,1,-4};
-        System.out.println(slu.threeSumClosest(nums, 1));
+        Problem219 slu = new Problem219();
+        int[]array = {1,2,3,1,2,3};
+        System.out.println(slu.containNearbyDuplicate(array,2));
+
 
     }
 }
