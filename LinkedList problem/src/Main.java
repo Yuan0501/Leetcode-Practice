@@ -5,26 +5,23 @@ public class Main {
 
 
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.addLast(2);
-        list.addLast(4);
-        list.addLast(3);
-        System.out.println(list.toString(list.head));
+        LinkedList list1 = new LinkedList();
+        list1.addLast(1);
+        list1.addLast(2);
+        list1.addLast(4);
 
-        LinkedList l2 = new LinkedList();
-        l2.addLast(5);
-        l2.addLast(6);
-        l2.addLast(4);
-        System.out.println(list.toString(l2.head));
+        LinkedList list2 = new LinkedList();
+        list2.addLast(1);
+        list2.addLast(3);
+        list2.addLast(4);
 
-//        list.addLast(4);
-//        list.addLast(5);
-//        String str = list.toString(list.head);
-//        System.out.println(str);
+        System.out.println(list1.toString(list1.head));
+        System.out.println(list2.toString(list2.head));
 
-        Problem2 slu = new Problem2();
-        ListNode node = slu.addTwoNumbers(list.head,l2.head);
-        System.out.println(list.toString(node));
+
+        Problem21 slu = new Problem21();
+        ListNode node = slu.mergeTwoLists(list1.head, list2.head);
+        System.out.println(list1.toString(node));
 
 
 
