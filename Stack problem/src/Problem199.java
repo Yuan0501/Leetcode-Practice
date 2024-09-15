@@ -24,7 +24,6 @@ public class Problem199 {
 
         rightSide(root.right, result, level + 1);
         rightSide(root.left, result, level  +1);
-
-
     }
+
 }

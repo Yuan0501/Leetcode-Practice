@@ -66,7 +66,7 @@ public class BST {
 // Using Queue to level traverse
     public List<List<Integer>> levelOrder(TreeNode root){
         List<List<Integer>> result = new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
         if(root == null){
             return result;
         }

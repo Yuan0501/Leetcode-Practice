@@ -1,6 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Stack;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -8,23 +9,42 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
 
-        BST tree = new BST();
-        tree.add(2);
-        tree.add(1);
-        tree.add(3);
-        tree.add(4);
-        tree.add(5);
-        System.out.println("preorder using recursion:");
-        tree.preOrder(tree.root);
+//        BST tree = new BST();
+//        tree.add(2);
+//        tree.add(1);
+//        tree.add(3);
+//        tree.add(4);
+//        tree.add(5);
+//        System.out.println("preorder using recursion:");
+//        tree.preOrder(tree.root);
+//
+//        System.out.println("solusion:");
+//
+//        Problem199 slu = new Problem199();
+//        List<Integer> list = slu.rightSideView(tree.root);
+//        for(int i : list){
+//            System.out.println(i);
+//        }
 
-        System.out.println("solusion:");
+//        MaxHeap<Integer> heap = new MaxHeap<>();
+//        heap.add(3);
+//        heap.add(1);
+//        heap.add(5);
+//        heap.add(8);
+//
+//        while(!heap.isEmpty()){
+//            System.out.println(heap.removeMax());
+//        }
 
-        Problem199 slu = new Problem199();
-        List<Integer> list = slu.rightSideView(tree.root);
-        for(int i : list){
-            System.out.println(i);
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.add(3);
+        pq.add(5);
+        pq.add(10);
+        pq.add(1);
+
+        while(!pq.isEmpty()){
+            System.out.println(pq.remove());
         }
-
 
 
     }
