@@ -9,4 +9,5 @@ public class Problem104 {
         return Math.max(leftDep, rightDep) + 1;
     }
 
+
 }
