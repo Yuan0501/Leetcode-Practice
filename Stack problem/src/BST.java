@@ -33,6 +33,48 @@ public class BST {
         return node;
     }
 
+    public TreeNode deleteNode(TreeNode root, int key){
+        if(root == null){
+            return null;
+        }
+
+        if(key > root.val){
+            root.right = deleteNode(root.right, key);
+        } else if (key < root.val) {
+            root.left = deleteNode(root.left, key);
+        }else{
+            if(root.left == null && root.right == null)
+                root = null;
+            else if (root.right != null) {
+                int val = successor(root);
+                root.val = val;
+                root.right = deleteNode(root.right, val);
+            }else {
+                int val = precessor(root);
+                root.val = val;
+                root.left = deleteNode(root.left, val);
+            }
+        }
+
+        return root;
+    }
+
+    private int successor(TreeNode root){
+        root = root.right;
+        while (root.left != null){
+            root = root.left;
+        }
+        return root.val;
+    }
+
+    private int precessor(TreeNode root){
+        root = root.left;
+        while (root.right != null){
+            root = root.right;
+        }
+        return root.val;
+    }
+
 // Using recursion to traverse
     public void preOrder(TreeNode root){
         if(root == null){
@@ -64,33 +106,33 @@ public class BST {
         }
     }
 // Using Queue to level traverse
-    public List<List<Integer>> levelOrder(TreeNode root){
-        List<List<Integer>> result = new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        if(root == null){
-            return result;
-        }
-        queue.add(root);
-        int level = 0;
-        while(!queue.isEmpty()){
-            result.add(new ArrayList<>());
-            int level_num = queue.size();
-            for(int i = 0; i < level_num; i++){
-                TreeNode node = queue.remove();
-                result.get(level).add(node.val);
-
-                if(node.left != null){
-                    queue.add(node.left);
-                }
-                if(node.right != null){
-                    queue.add(node.right);
-                }
-            }
-            level++;
-        }
-        return result;
-
-    }
+//    public List<List<Integer>> levelOrder(TreeNode root){
+//        List<List<Integer>> result = new ArrayList<>();
+//        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+//        if(root == null){
+//            return result;
+//        }
+//        queue.add(root);
+//        int level = 0;
+//        while(!queue.isEmpty()){
+//            result.add(new ArrayList<>());
+//            int level_num = queue.size();
+//            for(int i = 0; i < level_num; i++){
+//                TreeNode node = queue.remove();
+//                result.get(level).add(node.val);
+//
+//                if(node.left != null){
+//                    queue.add(node.left);
+//                }
+//                if(node.right != null){
+//                    queue.add(node.right);
+//                }
+//            }
+//            level++;
+//        }
+//        return result;
+//
+//    }
 
 
 

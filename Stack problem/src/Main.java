@@ -9,10 +9,12 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
 
-//        BST tree = new BST();
-//        tree.add(2);
-//        tree.add(1);
-//        tree.add(3);
+        BST tree = new BST();
+        tree.add(2);
+        tree.add(1);
+        tree.add(3);
+        Problem98 slu = new Problem98();
+        System.out.println(slu.isValidBST(tree.root));
 //        tree.add(4);
 //        tree.add(5);
 //        System.out.println("preorder using recursion:");
@@ -36,15 +38,15 @@ public class Main {
 //            System.out.println(heap.removeMax());
 //        }
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
-        pq.add(3);
-        pq.add(5);
-        pq.add(10);
-        pq.add(1);
-
-        while(!pq.isEmpty()){
-            System.out.println(pq.remove());
-        }
+//        PriorityQueue<Integer> pq = new PriorityQueue<>();
+//        pq.add(3);
+//        pq.add(5);
+//        pq.add(10);
+//        pq.add(1);
+//
+//        while(!pq.isEmpty()){
+//            System.out.println(pq.remove());
+//        }
 
 
     }

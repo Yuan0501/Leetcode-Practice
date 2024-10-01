@@ -3,7 +3,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         BT bt = new BT();
-        TreeNode node1 = new TreeNode(5);
+        TreeNode node1 = new TreeNode(1000000000);
         TreeNode node2 = new TreeNode(4);
         TreeNode node3 = new TreeNode(8);
         TreeNode node4 = new TreeNode(11);
