@@ -5,9 +5,8 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Problem47 slu = new Problem47();
-        int[] nums = {1, 1, 2};
+        Problem216 slu = new Problem216();
 
-        System.out.println(slu.permuteUnique(nums));
+        System.out.println(slu.combinationSum3(3, 9));
     }
 }
