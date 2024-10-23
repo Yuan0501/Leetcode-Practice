@@ -5,8 +5,9 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Problem216 slu = new Problem216();
+       int[] nums = {1, 2, 2};
+       Problem90 slu = new Problem90();
 
-        System.out.println(slu.combinationSum3(3, 9));
+        System.out.println(slu.subsetWithDup(nums));
     }
 }
