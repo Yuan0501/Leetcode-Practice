@@ -1,3 +1,5 @@
+// Time complexity: O(m * n)
+// Space complexity : O(1)
 public class Problem63 {
     public int uniquePathWithObstacles(int[][] obstacleGrid){
         int row = obstacleGrid.length;
