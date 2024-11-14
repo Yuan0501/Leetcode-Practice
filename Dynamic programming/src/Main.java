@@ -2,8 +2,8 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-      Problem63 slu = new Problem63();
-      int[][] grid = {{0, 0},{1, 1},{0,0}};
-        System.out.println(slu.uniquePathWithObstacles(grid));
+      Problem213 slu = new Problem213();
+      int[] nums = {1, 2, 1, 1};
+        System.out.println(slu.rob(nums));
     }
 }
