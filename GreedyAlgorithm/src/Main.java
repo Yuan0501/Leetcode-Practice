@@ -2,8 +2,8 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-       Problem605 slu = new Problem605();
-       int[] nums = {1,0,0,0,0,1};
-        System.out.println(slu.canPlaceFlowers(nums, 2));
+       Problem665 slu = new Problem665();
+       int[] nums = {3,4,2,3};
+        System.out.println(slu.checkPossibility(nums));
      }
 }
