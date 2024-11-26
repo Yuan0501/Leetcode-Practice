@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Problem219 slu = new Problem219();
-        int[]array = {1,2,3,1,2,3};
-        System.out.println(slu.containNearbyDuplicate(array,2));
+      Problem34 slu = new Problem34();
+      int[] nums = {2, 2};
+      System.out.println(slu.findFirst(nums, 3));
 
 
     }
