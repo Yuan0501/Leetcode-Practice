@@ -7,12 +7,9 @@ public class Main {
 //        Contest slu = new Contest();
 //        int[] nums = {1, 1, 2, 1};
 //        System.out.println(slu.countBeautifulSplits(nums));
-
-        Problem93 slu = new Problem93();
-        List<String> res = slu.restoreIpAddresses("25525511135");
-        for( int i = 0 ; i < res.size(); i++){
-            System.out.println(res.get(i));
-        }
+        Problem46 slu = new Problem46();
+        int[] nums = {1, 2, 3};
+        System.out.println(slu.permute(nums));
 
 //        Problem695 slu = new Problem695();
 //        int [][] grid = {{0,0,1,0,0,0,0,1,0,0,0,0,0},
