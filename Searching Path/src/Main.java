@@ -7,9 +7,8 @@ public class Main {
 //        Contest slu = new Contest();
 //        int[] nums = {1, 1, 2, 1};
 //        System.out.println(slu.countBeautifulSplits(nums));
-        Problem46 slu = new Problem46();
-        int[] nums = {1, 2, 3};
-        System.out.println(slu.permute(nums));
+        Problem77 slu = new Problem77();
+        System.out.println(slu.combine(4, 2));
 
 //        Problem695 slu = new Problem695();
 //        int [][] grid = {{0,0,1,0,0,0,0,1,0,0,0,0,0},
