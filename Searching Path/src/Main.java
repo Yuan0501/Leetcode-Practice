@@ -7,8 +7,9 @@ public class Main {
 //        Contest slu = new Contest();
 //        int[] nums = {1, 1, 2, 1};
 //        System.out.println(slu.countBeautifulSplits(nums));
-        Problem77 slu = new Problem77();
-        System.out.println(slu.combine(4, 2));
+        Problem90 slu = new Problem90();
+        int[] nums = {1, 2, 2};
+        System.out.println(slu.subsetsWithDup(nums));
 
 //        Problem695 slu = new Problem695();
 //        int [][] grid = {{0,0,1,0,0,0,0,1,0,0,0,0,0},
