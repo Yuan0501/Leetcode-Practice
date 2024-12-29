@@ -1,56 +1,42 @@
-public class Problem445 {
-    public ListNode reverseList(ListNode l){
-         ListNode pre = null;
-         ListNode cur = l;
+import java.util.Stack;
 
-         while (cur != null){
-             ListNode next = cur.next;
-             cur.next = pre;
-             pre = cur;
-             cur = next;
-         }
-         return pre;
-    }
+public class Problem445 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2){
-        ListNode re_l1 = reverseList(l1);
-        ListNode re_l2 = reverseList(l2);
+        Stack<ListNode> s1 = buildstack(l1);
+        Stack<ListNode> s2 = buildstack(l2);
+        ListNode dummyhead = new ListNode();
 
         int carry = 0;
-        ListNode res = new ListNode();
-        ListNode cur = res;
-
-        while(re_l1 != null || re_l2 != null || carry != 0){
-            int x = 0, y = 0;
-            if(re_l1 != null){
-                x = re_l1.val;
-            }else{
-                x = 0;
+        while (!s1.isEmpty() || !s2.isEmpty()|| carry != 0){
+            int sum = 0;
+            if(s1.isEmpty() && !s2.isEmpty()){
+                ListNode node2 = s2.pop();
+                sum = node2.val;
+            } else if (!s1.isEmpty() && s2.isEmpty()) {
+                ListNode node1 = s1.pop();
+                sum = node1.val;
+            }else if(!s1.isEmpty() && !s2.isEmpty()){
+                ListNode node1 = s1.pop();
+                ListNode node2 = s2.pop();
+                sum = node1.val + node2.val;
             }
-
-            if(re_l2 != null){
-                y = re_l2.val;
-            }else {
-                y = 0;
-            }
-
-            int sum = x + y + carry;
-            carry = sum / 10;
-            int num = sum % 10;
-            ListNode node = new ListNode(num);
-            cur.next = node;
-            cur = cur.next;
-
-            if(re_l1 != null){
-                re_l1 = re_l1.next;
-            }
-            if(re_l2 != null){
-                re_l2 = re_l2.next;
-            }
-
+            ListNode cur = new ListNode();
+            int val = (sum + carry) % 10;
+            carry = (sum + carry) / 10;
+            cur.val = val;
+            cur.next = dummyhead.next;
+            dummyhead.next = cur;
         }
+        return dummyhead.next;
+    }
 
-        ListNode re_res = reverseList(res.next);
-        return re_res;
+    public Stack<ListNode> buildstack(ListNode l){
+        Stack<ListNode> stack = new Stack<>();
+        while (l != null) {
+            stack.push(l);
+            l = l.next;
+        }
+        return stack;
     }
 }

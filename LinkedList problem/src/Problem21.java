@@ -23,4 +23,5 @@ public class Problem21 {
         }
         return dummyHead.next;
     }
+
 }

@@ -1,16 +1,21 @@
 public class Problem19 {
-    public ListNode removeNthFromEnd(ListNode head, int n){
+    public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummyHead = new ListNode();
-
-        ListNode p = dummyHead, q = dummyHead;
-        for(int i = 0; i < n + 1; i++){
-            q = q.next;
+        dummyHead.next = head;
+        ListNode fast = dummyHead;
+        ListNode slow = dummyHead;
+        for(int i = 0; i <= n; i++){
+            fast = fast.next;
         }
-        while(q != null){
-            p = p.next;
-            q = q.next;
+        if(fast == null){
+            return head.next;
         }
-        p.next = p.next.next;
+        while(fast != null){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        slow.next = slow.next.next;
         return head;
+
     }
 }
