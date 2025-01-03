@@ -7,7 +7,7 @@ public class Problem437 {
         }
 
         int res = 0;
-        res = findSum(root, targetSum);
+        res = helper(root, targetSum);
         res += pathSum(root.left, targetSum);
         res += pathSum(root.right, targetSum);
 
@@ -27,5 +27,18 @@ public class Problem437 {
 
         return res;
 
+    }
+
+    private int helper(TreeNode node, int sum){
+        if(node == null){
+            return 0;
+        }
+        int res = 0;
+        if(node.val == sum){
+            res++;
+        }
+        int left = helper(node.left, sum - node.val);
+        int right = helper(node.right, sum - node.val);
+        return res + left + right;
     }
 }

@@ -4,16 +4,16 @@ public class Main {
     public static void main(String[] args) {
         BT bt = new BT();
         TreeNode node1 = new TreeNode(1);
-        TreeNode node2 = new TreeNode(2);
-        TreeNode node3 = new TreeNode(3);
-        TreeNode node4 = new TreeNode(4);
-        TreeNode node5 = new TreeNode(5);
-//        TreeNode node6 = new TreeNode(15);
-//        TreeNode node7 = new TreeNode(7);
-//        TreeNode node8 = new TreeNode(7);
-//        TreeNode node9 = new TreeNode(2);
+        TreeNode node2 = new TreeNode(-2);
+        TreeNode node3 = new TreeNode(-3);
+        TreeNode node4 = new TreeNode(1);
+        TreeNode node5 = new TreeNode(3);
+        TreeNode node6 = new TreeNode(-2);
+        TreeNode node7 = new TreeNode(0);
+        TreeNode node8 = new TreeNode(-1);
+//        TreeNode node9 = new TreeNode(-2);
 //        TreeNode node10 = new TreeNode(0);
-//        TreeNode node11 = new TreeNode(0);
+//        TreeNode node11 = new TreeNode(1);
 //        TreeNode node12 = new TreeNode(5);
 //        TreeNode node13 = new TreeNode(1);
 
@@ -22,9 +22,9 @@ public class Main {
         bt.addNode(node3);
         bt.addNode(node4);
         bt.addNode(node5);
-//        bt.addNode(node6);
-//        bt.addNode(node7);
-//        bt.addNode(node8);
+        bt.addNode(node6);
+        bt.addNode(node7);
+        bt.addNode(node8);
 //        bt.addNode(node9);
 //        bt.addNode(node10);
 //        bt.addNode(node11);
@@ -34,8 +34,8 @@ public class Main {
         bt.levelTraversal(bt.root);
         System.out.println();
 
-        Problem404 slu = new Problem404();
-        System.out.println(slu.sumOfLeftLeaves(bt.root));
+        Problem437 slu = new Problem437();
+        System.out.println(slu.pathSum(bt.root, -1));
 //        Problem101 slu = new Problem101();
 //        System.out.println(slu.isSymmetric(bt.root));
 //        Problem222 slu = new Problem222();
